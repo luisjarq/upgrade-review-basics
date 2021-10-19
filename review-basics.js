@@ -62,7 +62,7 @@ for (const user of users) {
   let avg = 0;
   let count = 0;
   for (const prop in user.favoritesSounds) {
-    avg +=user.favoritesSounds[prop].volume;
+    avg += user.favoritesSounds[prop].volume;
     count++;
   }
   averages.push(user.name, avg / count);
@@ -70,52 +70,56 @@ for (const user of users) {
 console.log(averages);
 //Iteracion#3
 const users2 = [
-    {name: 'Manolo el del bombo',
-        favoritesSounds: {
-            waves: {format: 'mp3', volume: 50},
-            rain: {format: 'ogg', volume: 60},
-            firecamp: {format: 'mp3', volume: 80},
-        }
+  {
+    name: "Manolo el del bombo",
+    favoritesSounds: {
+      waves: { format: "mp3", volume: 50 },
+      rain: { format: "ogg", volume: 60 },
+      firecamp: { format: "mp3", volume: 80 },
     },
-    {name: 'Mortadelo',
-        favoritesSounds: {
-            waves: {format: 'mp3', volume: 30},
-            shower: {format: 'ogg', volume: 55},
-            train: {format: 'mp3', volume: 60},
-        }
+  },
+  {
+    name: "Mortadelo",
+    favoritesSounds: {
+      waves: { format: "mp3", volume: 30 },
+      shower: { format: "ogg", volume: 55 },
+      train: { format: "mp3", volume: 60 },
     },
-    {name: 'Super Lopez',
-        favoritesSounds: {
-            shower: {format: 'mp3', volume: 50},
-            train: {format: 'ogg', volume: 60},
-            firecamp: {format: 'mp3', volume: 80},
-        }
+  },
+  {
+    name: "Super Lopez",
+    favoritesSounds: {
+      shower: { format: "mp3", volume: 50 },
+      train: { format: "ogg", volume: 60 },
+      firecamp: { format: "mp3", volume: 80 },
     },
-    {name: 'El culebra',
-        favoritesSounds: {
-            waves: {format: 'mp3', volume: 67},
-            wind: {format: 'ogg', volume: 35},
-            firecamp: {format: 'mp3', volume: 60},
-        }
+  },
+  {
+    name: "El culebra",
+    favoritesSounds: {
+      waves: { format: "mp3", volume: 67 },
+      wind: { format: "ogg", volume: 35 },
+      firecamp: { format: "mp3", volume: 60 },
     },
-]
+  },
+];
 function repeatCounter(param) {
-    let result = [];
-    let counter = [];
-    if (Array.isArray(param)) {
-      param.forEach((d) => {
-        if (counter.indexOf(d) < 0) {
-          counter.push(d);
-          result.push([d, 1]);
-        } else {
-          result[counter.indexOf(d)][1]++;
-        }
-      });
-      return result;
-    } else {
-      return "No es un array";
-    }
+  let result = [];
+  let counter = [];
+  if (Array.isArray(param)) {
+    param.forEach((d) => {
+      if (counter.indexOf(d) < 0) {
+        counter.push(d);
+        result.push([d, 1]);
+      } else {
+        result[counter.indexOf(d)][1]++;
+      }
+    });
+    return result;
+  } else {
+    return "No es un array";
   }
+}
 let mostUsed = [];
 for (const user of users) {
   let avg = 0;
@@ -125,3 +129,17 @@ for (const user of users) {
   }
 }
 console.log(repeatCounter(mostUsed));
+//Iteracion#4
+const array = ["Caracol", "Mosquito", "Salamandra", "Ajolote"];
+function findArrayIndex(array, text) {
+  if (Array.isArray(array, text)) {
+    if (array.indexOf(text) > 0) {
+      return array.indexOf(text);
+    } else {
+      return false;
+    }
+  } else {
+    return "No es un array";
+  }
+}
+console.log(findArrayIndex(array,""));
