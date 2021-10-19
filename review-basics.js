@@ -142,4 +142,11 @@ function findArrayIndex(array, text) {
     return "No es un array";
   }
 }
-console.log(findArrayIndex(array,""));
+console.log(findArrayIndex(array, ""));
+//Iteracion#5
+function rollDice(faces) {
+  let random = Math.random() * (faces - 1) + 1;
+  return Math.round(random);
+}
+console.log(rollDice(8));
+
