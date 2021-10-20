@@ -150,7 +150,7 @@ function rollDice(faces) {
 }
 console.log(rollDice(8));
 //Iteracion#6
-const array = ["Caracol", "Mosquito", "Salamandra", "Ajolote"];
+const array = ['Mesirve', 'Cristiano Romualdo', 'Fernando Muralla', 'Ronalguiño'];
 function swap(array, indexA, indexB) {
   let a = array[indexA];
   let b = array[indexB];
