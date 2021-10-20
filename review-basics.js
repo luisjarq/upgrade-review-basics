@@ -149,4 +149,14 @@ function rollDice(faces) {
   return Math.round(random);
 }
 console.log(rollDice(8));
+//Iteracion#6
+const array = ["Caracol", "Mosquito", "Salamandra", "Ajolote"];
+function swap(array, indexA, indexB) {
+  let a = array[indexA];
+  let b = array[indexB];
+  array.splice(indexA, 1, b);
+  array.splice(indexB, 1, a);
+  return array;
+}
+console.log(swap(array, 1, 2));
 
